@@ -1,0 +1,363 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* Navbar Styles */
+.navbar {
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-scrolled {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-brand img{
+    width: 100px;
+    height: 50px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff;
+}
+
+/* Carousel Styles */
+.carousel {
+    margin-top: 80px; /* Adjust depending on navbar height */
+}
+
+.carousel-item {
+    height: 80vh; /* Adjust for different screen sizes */
+    min-height: 400px;
+    position: relative;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    filter: brightness(70%);
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f8f9fa;
+    margin-bottom: 5px;
+}
+
+.carousel-caption h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.carousel-caption small {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* Carousel Indicators */
+.carousel-indicators [data-bs-target] {
+    background-color: #007bff;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.carousel-indicators .active {
+    background-color: #0056b3;
+    width: 14px;
+    height: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .carousel-caption {
+        bottom: 10%;
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    .carousel-caption h2 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+
+    .carousel-caption small {
+        font-size: 0.9rem;
+    }
+}
+
+/* Fade-Up Animation */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at the original position */
+    }
+}
+
+/* Carousel Caption Animation */
+.carousel-caption {
+    position: absolute;
+    bottom: 20%;
+    transform: translateX(-50%);
+    text-align: center;
+    align-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    opacity: 0; /* Start as invisible */
+    animation: fadeUp 1s ease-out forwards; /* Apply fade-up animation */
+}
+
+/* Delay for each carousel item */
+.carousel-item:nth-child(1) .carousel-caption {
+    animation-delay: 0.2s;
+}
+
+.carousel-item:nth-child(2) .carousel-caption {
+    animation-delay: 0.5s;
+}
+
+.carousel-item:nth-child(3) .carousel-caption {
+    animation-delay: 0.8s;
+}
+
+
+
+/* Section Styling */
+.latest-posts {
+    padding: 50px 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.section-date {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 30px;
+}
+
+/* Post Styling */
+.post {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.post-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.post-category {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #c37c5a;
+    text-transform: uppercase;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+.post-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+}
+
+.post-author {
+    font-size: 0.8rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .post-image {
+        height: 200px;
+    }
+
+    .post-title {
+        font-size: 1rem;
+    }
+}
+
+.travel-section {
+    background-color: #fff;
+}
+
+.travel-section h2 {
+    color: #222;
+}
+
+.btn-success {
+    background-color: #5B8657;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #4A7047;
+}
+
+.overlay-img {
+    width: 120px;
+    top: -20px;
+    left: 30%;
+}
+
+.overlay-img-2 {
+    width: 180px;
+    bottom: -20px;
+    right: 10%;
+}
+
+
+/* Footer Styling */
+.footer {
+    background-color: #121212;
+    color: #ffffff;
+    padding: 50px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Footer Logo */
+.footer-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Footer Text */
+.footer-text {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    max-width: 80%;
+    margin: 0 auto 20px;
+}
+
+/* Footer Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin: 5px 0;
+}
+
+.footer-links a {
+    color: #b0b0b0;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+/* Subscribe Box */
+.subscribe-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2a2a2a;
+    border-radius: 5px;
+    overflow: hidden;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.subscribe-box input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    background: none;
+    color: white;
+    outline: none;
+}
+
+.subscribe-box input::placeholder {
+    color: #b0b0b0;
+}
+
+.subscribe-box button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.subscribe-box button i {
+    font-size: 1rem;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 30px;
+    border-top: 1px solid #2a2a2a;
+    padding-top: 10px;
+    font-size: 0.8rem;
+    color: #b0b0b0;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .footer-text {
+        max-width: 100%;
+    }
+
+    .subscribe-box {
+        max-width: 100%;
+    }
+
+    .footer-links {
+        text-align: center;
+    }
+}
